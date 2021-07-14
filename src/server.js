@@ -26,6 +26,10 @@ const port = Number(process.env.PORT);
 
 app.use("/api", drugInfoRouter);
 
+app.get("/", (req, res) => {
+    res.send("Node app is running");
+});
+
 app.all("*", (req, res, next) => {
     const err = new HttpException(404)
     next(err);
