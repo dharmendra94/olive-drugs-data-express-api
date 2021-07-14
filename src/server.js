@@ -27,7 +27,7 @@ const port = Number(process.env.PORT);
 app.use("/api", drugInfoRouter);
 
 app.get("/", (req, res) => {
-    res.send("Node app is running and DB host: " + process.env.DB_HOST + process.env.DB_USER + process.env.DB_PASS + process.env.DB_DATABASE);
+    res.send("Node app is running");
 });
 
 app.all("*", (req, res, next) => {
