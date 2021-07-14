@@ -2,11 +2,6 @@ const query = require("../db/db-connection");
 const { multipleColumnSet } = require("../utils/common.utils");
 
 class DrugInfoModel {
-    nadacTableName = "NADAC";
-    ndcsTable = "NDCInfo";
-    packageInfoTableName = "PackageInfo";
-    drugsInfoTable = "DrugsInfo";
-
     drugSearch = async (searchTerm) => {
         let replacement = `'%${searchTerm}%'`;
 
